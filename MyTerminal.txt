@@ -1,0 +1,68 @@
+Last login: Wed Jan  6 15:40:08 on ttys000
+MacBook-Pro-Elena:~ paniklicht$ mkdir esa
+MacBook-Pro-Elena:~ paniklicht$ cd esa
+MacBook-Pro-Elena:esa paniklicht$ git clone https://github.com/mordmelena/Mole.git
+Cloning into 'Mole'...
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 20 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (20/20), done.
+MacBook-Pro-Elena:esa paniklicht$ git add 5200.jpg
+fatal: not a git repository (or any of the parent directories): .git
+MacBook-Pro-Elena:esa paniklicht$ git status
+fatal: not a git repository (or any of the parent directories): .git
+MacBook-Pro-Elena:esa paniklicht$ cd mole
+MacBook-Pro-Elena:mole paniklicht$ git add 5200.jpg
+fatal: pathspec '5200.jpg' did not match any files
+MacBook-Pro-Elena:mole paniklicht$ cd images
+MacBook-Pro-Elena:images paniklicht$ git add 5200.jpg
+MacBook-Pro-Elena:images paniklicht$ cd mole
+-bash: cd: mole: No such file or directory
+MacBook-Pro-Elena:images paniklicht$ cd esa
+-bash: cd: esa: No such file or directory
+MacBook-Pro-Elena:images paniklicht$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   5200.jpg
+
+MacBook-Pro-Elena:images paniklicht$ git commit
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+MacBook-Pro-Elena:images paniklicht$ git diff
+MacBook-Pro-Elena:images paniklicht$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   5200.jpg
+
+MacBook-Pro-Elena:images paniklicht$ git commit -m "Added a nice realistic mole"
+[main 716bbbf] Added a nice realistic mole
+ Committer: Elena Mordmillovich <paniklicht@MacBook-Pro-Elena.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 images/5200.jpg
+MacBook-Pro-Elena:images paniklicht$ git diff
+MacBook-Pro-Elena:images paniklicht$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+MacBook-Pro-Elena:images paniklicht$ 
